@@ -2,33 +2,30 @@
 <head>
 <script>
 window.onload = function () {
-    openBlanker(); // Corrected function name casing
+    openBlanker();
 };
 
+let openedURL = false; // Track if the URL has already been opened
+
 function openBlanker() {
-    alert("Ran function openBlanker");
-    alert(openedURL);
-    if (!openedURL = true)
-    var openedURL = "true";
+    if (openedURL) return; // Exit if the URL has already been opened
+    openedURL = true; // Mark as opened
+
     var url = "https://pokemon-emerald.vercel.app/pokemon_emerald.html"; // Replace with your link
-    if (url) {
-        var win = window.open();
-        if (win) { // Check if the window opened successfully
-            win.document.body.style.margin = '0';
-            win.document.body.style.height = '100vh';
-            var iframe = win.document.createElement('iframe');
-            iframe.style.border = 'none';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.margin = '0';
-            iframe.src = url;
-            win.document.body.appendChild(iframe);
-            let openedWindow = window.open("https://pokemon-emerald.vercel.app/pokemon_emerald.html"); // Open the window
-            openedWindow.close();
+    var win = window.open();
+    if (win) { // Check if the window opened successfully
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+        win.close();
     }
 }
-
-
 </script>
 </head>
 </html>
