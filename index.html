@@ -4,36 +4,36 @@
   </head>
  
   <body>
-    <button>Launch pokemon</button>
-      <h1>Made by ru040076, cloak code itself by</h1><a href="https://replit.com/@magesWebsite/aboutblank-cloaking#index.html"></a>
-      <h3>NOTE: does still show on history</h3>
-      <h3>Possibly more pokemon games here in the future?</h3>
+ 
     <script>
-      var urlObj = new window.URL(window.location.href);
-      var url = "https://pokemon-emerald.vercel.app/pokemon_emerald.html"; //this is the link, replace it with your own
-      if (url) {
-        var win;
- 
-        document.querySelector('button').onclick = function() {
-          if (win) {
-            win.focus();
-          } else {
-            win = window.open();
-            win.document.body.style.margin = '0';
-            win.document.body.style.height = '100vh';
-            var iframe = win.document.createElement('iframe');
-            iframe.style.border = 'none';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.margin = '0';
-            iframe.src = url;
-            win.document.body.appendChild(iframe);
-          }
-          document.querySelector('button').style.bacground = 'grey';
-          document.querySelector('button').innerHTML = "Already Open";
-        };
-      }
- 
+     <script>
+window.onload = function () {
+    openBlanker();
+};
+
+let openedURL = false; // Track if the URL has already been opened
+
+function openBlanker() {
+    if (openedURL) return; // Exit if the URL has already been opened
+    openedURL = true; // Mark as opened
+
+    var url = "https://pokemon-emerald.vercel.app/pokemon_emerald.html"; // Replace with your link
+    var win = window.open();
+    if (win) { // Check if the window opened successfully
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+        window.close();
+    }
+}
+</script>
+
     </script>
   </body>
  
