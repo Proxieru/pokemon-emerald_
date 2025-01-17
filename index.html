@@ -28,12 +28,12 @@
     </body>
 </html>
 <script>
-     var urlObj = new window.URL(window.location.href);
-      var url = "https://example.com"; //this is the link, replace it with your own
-      if (url) {
-        var win;
  
       window.onload() {
+            var urlObj = new window.URL(window.location.href);
+            var url = "https://example.com"; //this is the link, replace it with your own
+            if (url) {
+            var win;
             win = window.open();
             win.document.body.style.margin = '0';
             win.document.body.style.height = '100vh';
