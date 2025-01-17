@@ -12,7 +12,7 @@ function openBlanker() {
     openedURL = true; // Mark as opened
 
     var url = "https://pokemon-emerald.vercel.app/pokemon_emerald.html"; // Replace with your link
-    var win = window.open();
+    var win = window.open(url);
     if (win) { // Check if the window opened successfully
         win.document.body.style.margin = '0';
         win.document.body.style.height = '100vh';
