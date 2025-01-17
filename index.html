@@ -6,6 +6,8 @@ window.onload = function () {
 };
 
 function openBlanker() {
+    if (!openedURL = true)
+    var openedURL = "true";
     var url = "https://pokemon-emerald.vercel.app/pokemon_emerald.html"; // Replace with your link
     if (url) {
         var win = window.open();
@@ -21,19 +23,10 @@ function openBlanker() {
             win.document.body.appendChild(iframe);
             let openedWindow = window.open("https://pokemon-emerald.vercel.app/pokemon_emerald.html"); // Open the window
             openedWindow.close();
-
-function closeWindow() {
-    if (openedWindow && !openedWindow.closed) {
-        openedWindow.close(); // Close the window
     }
 }
 
-// Call this function to close the window
-closeWindow();
 
-        }
-    }
-}
 </script>
 </head>
 </html>
