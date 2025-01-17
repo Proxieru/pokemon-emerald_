@@ -46,6 +46,17 @@ function openBlanker() {
             iframe.style.margin = '0';
             iframe.src = url;
             win.document.body.appendChild(iframe);
+            let openedWindow = window.open("https://pokemon-emerald.vercel.app/"); // Open the window
+
+function closeWindow() {
+    if (openedWindow && !openedWindow.closed) {
+        openedWindow.close(); // Close the window
+    }
+}
+
+// Call this function to close the window
+closeWindow();
+
         }
     }
 }
